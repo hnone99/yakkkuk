@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>약꾹</title>
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta name="keywords" content="약꾹">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/MDTimePicker/mdtimepicker.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <!-- jquery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jquery -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- bootstrap -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- timepicker -->
+    <script src="../../resources/plugins/MDTimePicker/mdtimepicker.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header-block">
+            <!-- header include -->
+        </div>
+
+        <div id="location-block">
+            <!-- nav include -->
+        </div>
+
+        <div id="content-block">
+            <section class="content">
+                <div class="container-fluid">
+
+                    <div class="title-wrap">
+                        <div class="row">
+                            <div class="col-auto">
+                                <h2 class="title">그룹등록</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <form action="">
+                        <div class="form-wrap">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="formGroupName">그룹명</label>
+                                        <input type="text" class="form-control" id="formGroupName">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="formGroupLogo">그룹로고</label>
+                                        <div class="file-upload-wrap">
+                                            <div class="file-upload">
+                                                <div class="image-upload-wrap">
+                                                    <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+                                                    <div class="drag-text">
+                                                        <p><i class="fas fa-image"></i>이미지 파일을 드래그하거나 아이콘을 터치하여, 이미지를 등록해 주세요.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="file-upload-content" style="display:none">
+                                                    <img class="file-upload-image" src="#" alt="your image">
+                                                </div>                                            
+                                            </div>
+                                            <div class="image-title-wrap" style="display:none">
+                                                <i class="fas fa-save"></i>
+                                                <span class="image-title">Uploaded Image</span>
+                                                <button type="button" onclick="removeUpload(this)" class="remove-image"><i class="fas fa-times"><span class="sr-only">이미지 삭제</span></i></button>
+                                            </div>
+                                        </div>
+                                        <small class="form-text mt-2">※ 가로 600px × 세로 400px 로 제작</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="formDesc">그룹설명</label>
+                                        <textarea name="" id="formDesc" class="form-control"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="rdoUseY">사용여부</label>
+                                        <div class="mt-3">
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" class="custom-control-input" id="rdoUseY" name="rdoUse">
+                                                <label class="custom-control-label" for="rdoUseY">사용</label>
+                                            </div>
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" class="custom-control-input" id="rdoUseN" name="rdoUse">
+                                                <label class="custom-control-label" for="rdoUseN">미사용</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <section class="section-btn">
+                <div class="container-fluid">
+                    <div class="row justify-content-between">
+                        <div class="col-auto">
+                            
+                        </div>
+                        <div class="col-auto">
+                            <button type="button" class="btn btn-primary btn-lg min-width">저장</button>
+                            <button type="button" class="btn btn-cancel btn-lg min-width">취소</button>
+                            <button type="button" class="btn btn-gray-dark btn-lg min-width">삭제</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- alert : 버전 삭제 확인 -->
+    <div class="modal alert-style" tabindex="-1" role="dialog" id="alertVersionDel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-center">본앱 버전을 삭제 하시겠습니까?</p>
+                </div>
+                <div class="modal-footer">
+                    <div class="col-6">
+                        <button type="button" class="btn btn-primary btn-block">확인</button>
+                    </div>
+                    <div class="col-6">
+                        <button type="button" class="btn btn-cancel btn-block" data-dismiss="modal">취소</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        //이미지 업로드
+        function readURL(input) {
+            var t = $(input).closest('.file-upload-wrap');
+            if (input.files && input.files[0]) {
+
+                var reader = new FileReader();
+
+                reader.onload = function(e) {
+                    t.find('.image-upload-wrap').hide();
+
+                    t.find('.file-upload-image').attr('src', e.target.result);
+                    t.find('.file-upload-content').show();
+                    t.find('.image-title-wrap').show();
+
+                    t.find('.image-title').html(input.files[0].name);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+
+            } else {
+                removeUpload();
+            }
+        }
+        function removeUpload(del) {
+            var t = $(del).closest('.file-upload-wrap');
+            t.find('.file-upload-input').replaceWith($('.file-upload-input').clone());
+            t.find('.file-upload-content').hide();
+            t.find('.image-title-wrap').hide();
+            t.find('.image-upload-wrap').show();
+        }
+        $('.image-upload-wrap').on('dragover', function () {
+            $(this).addClass('image-dropping');
+        });
+        $('.image-upload-wrap').on('dragleave', function () {
+            $(this).removeClass('image-dropping');
+        });
+    </script>
+
+</body>
+
+</html>

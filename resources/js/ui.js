@@ -112,3 +112,35 @@ var Header = Header || {};
         },50);
     });
 }(jQuery);
+
+// textarea 글자수 체크
+function fnChkByte(obj, maxByte, textTarget){
+    var str = obj.value;
+    var str_len = str.length;
+
+    var rbyte = 0;
+    var rlen = 0;
+    var one_char = "";
+    var str2 = "";
+
+    for (var i = 0; i < str_len; i++) {
+        one_char = str.charAt(i);
+        if (escape(one_char).length > 4) {
+            rbyte += 2; //한글2Byte
+        } else {
+            rbyte++; //영문 등 나머지 1Byte
+        }
+        if (rbyte <= maxByte) {
+            rlen = i + 1; //return할 문자열 갯수
+        }
+    }
+
+    if (rbyte > maxByte) {
+        alert("메세지는 최대 " + maxByte + "byte를 초과할 수 없습니다.")
+        str2 = str.substr(0, rlen); //문자열 자르기
+        obj.value = str2;
+        fnChkByte(obj, maxByte);
+    } else {
+        $(textTarget).text(rbyte);
+    }
+}

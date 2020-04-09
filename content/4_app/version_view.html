@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>약꾹</title>
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta name="keywords" content="약꾹">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/MDTimePicker/mdtimepicker.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <!-- jquery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jquery -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- bootstrap -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- timepicker -->
+    <script src="../../resources/plugins/MDTimePicker/mdtimepicker.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header-block">
+            <!-- header include -->
+        </div>
+
+        <div id="location-block">
+            <!-- nav include -->
+        </div>
+
+        <div id="content-block">
+            <section class="content">
+                <div class="container-fluid">
+
+                    <div class="title-wrap">
+                        <div class="row">
+                            <div class="col-auto">
+                                <h2 class="title">앱 버전 관리</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <form action="">
+                        <div class="form-wrap">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="formAppTitle">앱 이름</label>
+                                        <select name="" id="formAppTitle" class="form-control">
+                                            <option value=""></option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <label for="formServiceTitle">서비스명</label>
+                                        <input type="text" class="form-control" id="formServiceTitle">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <label for="formOrganization" class="required">기관선택</label>
+                                        <select name="" id="formOrganization" class="form-control">
+                                            <option value=""></option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="formAppVerSel" class="required">앱 버전 선택</label>
+                                        <div class="row">
+                                            <div class="col-12 col-md-6">
+                                                <div class="row row-10">
+                                                    <div class="col-4">
+                                                        <select name="" id="formAppVerSel" class="form-control" title="버전 첫자리">
+                                                            <option value="">1</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <select name="" class="form-control" title="버전 가운데자리">
+                                                            <option value="">00</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <select name="" class="form-control" title="버전 끝자리">
+                                                            <option value="">00</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="formAppUrl" class="required">앱 업데이트 URL</label>
+                                        <input type="text" class="form-control" id="formAppUrl">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="formTerms1" class="required">약관 선택</label>
+                                        <div class="mt-3">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="formTerms1" name="chkTerm">
+                                                <label class="custom-control-label" for="formTerms1">개인정보 수집 및  이용안내</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="formTerms2" name="chkTerm">
+                                                <label class="custom-control-label" for="formTerms2">회원약관</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="formVerDesc" class="required">앱 버전 설명</label>
+                                        <textarea name="" id="formVerDesc" class="form-control"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <label for="formAppDate" class="required">반영일시</label>
+                                        <div class="row row-10">
+                                            <div class="col-6">
+                                                <input type="text" id="formAppDate" class="form-control" data-datepicker placeholder="날짜선택">
+                                            </div>
+                                            <div class="col-6">
+                                                <input type="text" class="form-control" data-timepicker placeholder="시간선택">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <label for="rdoUseY">사용여부</label>
+                                        <div class="mt-3">
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" class="custom-control-input" id="rdoUseY" name="rdoUse">
+                                                <label class="custom-control-label" for="rdoUseY">사용</label>
+                                            </div>
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" class="custom-control-input" id="rdoUseN" name="rdoUse">
+                                                <label class="custom-control-label" for="rdoUseN">미사용</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <section class="section-btn">
+                <div class="container-fluid">
+                    <div class="row justify-content-between">
+                        <div class="col-auto">
+                            
+                        </div>
+                        <div class="col-auto">
+                            <button type="button" class="btn btn-primary btn-lg min-width">저장</button>
+                            <button type="button" class="btn btn-cancel btn-lg min-width">취소</button>
+                            <button type="button" class="btn btn-gray-dark btn-lg min-width" data-toggle="modal" data-target="#alertVersionDel">삭제</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- alert : 버전 삭제 확인 -->
+    <div class="modal alert-style" tabindex="-1" role="dialog" id="alertVersionDel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-center">본앱 버전을 삭제 하시겠습니까?</p>
+                </div>
+                <div class="modal-footer">
+                    <div class="col-6">
+                        <button type="button" class="btn btn-primary btn-block">확인</button>
+                    </div>
+                    <div class="col-6">
+                        <button type="button" class="btn btn-cancel btn-block" data-dismiss="modal">취소</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>약꾹</title>
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta name="keywords" content="약꾹">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/MDTimePicker/mdtimepicker.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <!-- jquery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jquery -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- bootstrap -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- timepicker -->
+    <script src="../../resources/plugins/MDTimePicker/mdtimepicker.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header-block">
+            <!-- header include -->
+        </div>
+
+        <div id="location-block">
+            <!-- nav include -->
+        </div>
+
+        <div id="content-block">
+            <section class="content">
+                <div class="container-fluid">
+
+                    <div class="title-wrap">
+                        <div class="row">
+                            <div class="col-auto">
+                                <h2 class="title">약관관리</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <form action="">
+                        <div class="form-wrap">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <label for="formOraganSel" class="required">기관선택</label>
+                                        <select name="" id="formOraganSel" class="form-control">
+                                            <option value="">선택</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <label for="formClassfication" class="required">종류</label>
+                                        <select name="" id="formClassfication" class="form-control">
+                                            <option value="">선택</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="formSubject" class="required">제목</label>
+                                        <input type="text" class="form-control" id="formSubject">
+                                    </div>
+                                </div>
+                            </div>                            
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="defaultTermsUse">기본약관 적용</label>
+                                        <div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="defaultTermsUse">
+                                                <label class="custom-control-label" for="defaultTermsUse">기본 약관내용 사용</label>
+                                            </div>
+                                            <button type="button" class="btn btn-dark min-width-120 btn-square" data-toggle="modal" data-target="#modalTerms">내용확인</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="formContents" class="required">내용</label>
+                                        <textarea name="" id="formContents" class="form-control"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-wrap">
+                                <div class="form-group">
+                                    <label for="rdoAgreeY">동의필수여부</label>
+                                    <div class="mt-3">
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" class="custom-control-input" id="rdoAgreeY" name="rdoAgree">
+                                            <label class="custom-control-label" for="rdoAgreeY">필수</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" class="custom-control-input" id="rdoAgreeN" name="rdoAgree">
+                                            <label class="custom-control-label" for="rdoAgreeN">선택</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-wrap">
+                                <div class="form-group">
+                                    <label for="rdoDayNow">반영일</label>
+                                    <div class="mt-3">
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" class="custom-control-input" id="rdoDayNow" name="rdoDay">
+                                            <label class="custom-control-label" for="rdoDayNow">즉시</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" class="custom-control-input" id="rdoDayReserv" name="rdoDay">
+                                            <label class="custom-control-label" for="rdoDayReserv">예약</label>
+                                        </div>
+                                        <span class="radio-and-form">
+                                            <input type="text" class="form-control" data-datepicker placeholder="날짜선택">
+                                            <input type="text" class="form-control" data-timepicker placeholder="시간선택">
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="rdoUseY">사용여부</label>
+                                <div class="mt-3">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="rdoUseY" name="rdoUse">
+                                        <label class="custom-control-label" for="rdoUseY">사용</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="rdoUseN" name="rdoUse">
+                                        <label class="custom-control-label" for="rdoUseN">미사용</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <section class="section-btn">
+                <div class="container-fluid">
+                    <div class="row justify-content-between">
+                        <div class="col-auto">
+                            <button type="button" class="btn btn-reset btn-lg" onclick="history.back()">목록</button>
+                        </div>
+                        <div class="col-auto">
+                            <button type="button" class="btn btn-primary btn-lg min-width">저장</button>
+                            <button type="button" class="btn btn-cancel btn-lg min-width">취소</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- modal : 기본 약관내용 확인 -->
+    <div class="modal" tabindex="-1" role="dialog" id="modalTerms">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">기본약관 내용 확인</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="terms-box">
+                        개인정보 수집/이용 동의필수<br>
+                        {기관명} (이하 “회사”)는 『개인정보보호법』, 『정보통신망 이용 촉진 및 정보보호 등에 관한 법률』에 의거 ‘전립선암 by 세컨드 닥터’ 서비스(이하 “서비스”) 관련하여 회원의 개인정보를 아래와 같이 수집∙이용하고자 합니다. 충분히 읽어보신 후, 동의 여부를 체크하여 주시기 바랍니다.
+                        <br><br>
+                        {기관명} (이하 “회사”)는 『개인정보보호법』, 『정보통신망 이용 촉진 및 정보보호 등에 관한 법률』에 의거 ‘전립선암 by 세컨드 닥터’ 서비스(이하 “서비스”) 관련하여 회원의 개인정보를 아래와 같이 수집∙이용하고자 합니다. 충분히 읽어보신 후, 동의 여부를 체크하여 주시기 바랍니다.
+                        <br><br>
+                        {기관명} (이하 “회사”)는 『개인정보보호법』, 『정보통신망 이용 촉진 및 정보보호 등에 관한 법률』에 의거 ‘전립선암 by 세컨드 닥터’ 서비스(이하 “서비스”) 관련하여 회원의 개인정보를 아래와 같이 수집∙이용하고자 합니다. 충분히 읽어보신 후, 동의 여부를 체크하여 주시기 바랍니다.
+                        <br><br>
+                        {기관명} (이하 “회사”)는 『개인정보보호법』, 『정보통신망 이용 촉진 및 정보보호 등에 관한 법률』에 의거 ‘전립선암 by 세컨드 닥터’ 서비스(이하 “서비스”) 관련하여 회원의 개인정보를 아래와 같이 수집∙이용하고자 합니다. 충분히 읽어보신 후, 동의 여부를 체크하여 주시기 바랍니다.
+                        <br><br>
+                        {기관명} (이하 “회사”)는 『개인정보보호법』, 『정보통신망 이용 촉진 및 정보보호 등에 관한 법률』에 의거 ‘전립선암 by 세컨드 닥터’ 서비스(이하 “서비스”) 관련하여 회원의 개인정보를 아래와 같이 수집∙이용하고자 합니다. 충분히 읽어보신 후, 동의 여부를 체크하여 주시기 바랍니다.
+                        <br><br>
+                        개인정보 수집/이용 동의필수<br><
+                        {기관명} (이하 “회사”)는 『개인정보보호법』, 『정보통신망 이용 촉진 및 정보보호 등에 관한 법률』에 의거 ‘전립선암 by 세컨드 닥터’ 서비스(이하 “서비스”) 관련하여 회원의 개인정보를 아래와 같이 수집∙이용하고자 합니다. 충분히 읽어보신 후, 동의 여부를 체크하여 주시기 바랍니다.
+                        <br><br>
+                        {기관명} (이하 “회사”)는 『개인정보보호법』, 『정보통신망 이용 촉진 및 정보보호 등에 관한 법률』에 의거 ‘전립선암 by 세컨드 닥터’ 서비스(이하 “서비스”) 관련하여 회원의 개인정보를 아래와 같이 수집∙이용하고자 합니다. 충분히 읽어보신 후, 동의 여부를 체크하여 주시기 바랍니다.
+                        <br><br>
+                        {기관명} (이하 “회사”)는 『개인정보보호법』, 『정보통신망 이용 촉진 및 정보보호 등에 관한 법률』에 의거 ‘전립선암 by 세컨드 닥터’ 서비스(이하 “서비스”) 관련하여 회원의 개인정보를 아래와 같이 수집∙이용하고자 합니다. 충분히 읽어보신 후, 동의 여부를 체크하여 주시기 바랍니다.
+                        <br><br>
+                        {기관명} (이하 “회사”)는 『개인정보보호법』, 『정보통신망 이용 촉진 및 정보보호 등에 관한 법률』에 의거 ‘전립선암 by 세컨드 닥터’ 서비스(이하 “서비스”) 관련하여 회원의 개인정보를 아래와 같이 수집∙이용하고자 합니다. 충분히 읽어보신 후, 동의 여부를 체크하여 주시기 바랍니다.
+                        <br><br>
+                        {기관명} (이하 “회사”)는 『개인정보보호법』, 『정보통신망 이용 촉진 및 정보보호 등에 관한 법률』에 의거 ‘전립선암 by 세컨드 닥터’ 서비스(이하 “서비스”) 관련하여 회원의 개인정보를 아래와 같이 수집∙이용하고자 합니다. 충분히 읽어보신 후, 동의 여부를 체크하여 주시기 바랍니다.
+                    </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $('#btnManufacturerSelect').on('click',function(){
+
+            });
+        });
+    </script>
+
+</body>
+
+</html>

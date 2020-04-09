@@ -188,6 +188,7 @@ textarea.form-control {
 
 .form-group {
   margin-bottom: $form-group-margin-bottom;
+
   > label{
     display: block;
     width: 100%;
@@ -197,6 +198,7 @@ textarea.form-control {
     font-weight: 700;
     line-height: $btn-line-height;
     color: $dark;
+    margin-bottom: $label-margin-bottom;
     &.bg-light-danger{background: #feeeed;}
     &.required::before{content: '*';color: $red;margin-right: 3px;}
   }
@@ -206,6 +208,7 @@ textarea.form-control {
   display: block;
   margin-top: $form-text-margin-top;
   color: #909090;
+  margin-bottom: 0;
 }
 
 

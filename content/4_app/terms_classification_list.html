@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>약꾹</title>
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta name="keywords" content="약꾹">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/MDTimePicker/mdtimepicker.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <!-- jquery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jquery -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- bootstrap -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- timepicker -->
+    <script src="../../resources/plugins/MDTimePicker/mdtimepicker.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header-block">
+            <!-- header include -->
+        </div>
+
+        <div id="location-block">
+            <!-- nav include -->
+        </div>
+
+        <div id="content-block">
+            <section class="content">
+                <div class="container-fluid">
+                    <div class="title-wrap">
+                        <div class="row">
+                            <div class="col-6">
+                                <h2 class="title">약관 종류 관리</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search-box">
+                        <form action="">
+                            <div class="form-wrap">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label for="formKeyword">검색어</label>
+                                            <div class="row row-10">
+                                                <div class="col-4">
+                                                    <select name="" id="formKeyword" class="form-control">
+                                                        <option value="">약관종류명</option>
+                                                        <option value="">등록자</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                            
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-md-6">
+                                        <div class="form-group">
+                                            <label for="formUse">사용여부</label>
+                                            <div class="row row-10">
+                                                <div class="col-4">
+                                                    <select name="" id="formUse" class="form-control">
+                                                        <option value="">전체</option>
+                                                        <option value="">사용</option>
+                                                        <option value="">미사용</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="form-group">
+                                            <label for="formPeriod">등록일</label>
+                                            <div class="row row-10">
+                                                <div class="col-6">
+                                                    <input type="text" id="formPeriod" class="form-control" data-datepicker placeholder="시작일">
+                                                </div>
+                                                <div class="col-6">
+                                                    <input type="text" class="form-control" data-datepicker placeholder="종료일">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                              
+                                </div>
+                            </div>                            
+                            <div class="btns row">
+                                <div class="col-6 text-right">
+                                    <button type="submit" class="btn btn-gray-dark min-width"><i class="fas fa-search"></i> 검색</button>
+                                </div>
+                                <div class="col-6">
+                                    <button type="reset" class="btn btn-reset min-width">초기화</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="table-top">
+                        <div class="row">
+                            <div class="col-auto">
+                                <select name="" id="" class="form-control d-inline-block w-auto mr-2">
+                                    <option value="">최근등록순</option>
+                                    <option value="">최초등록순</option>
+                                </select>
+                                <span>총 <span class="text-danger">657</span> 건</span>
+                            </div>
+                            <div class="col-auto">
+                                <button type="reset" class="btn btn-primary-dark min-width" onclick="window.location.href='terms_classfication_form.html'">약관 종류 등록</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-center table-hover">
+                            <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>약관명</th>
+                                    <th>등록일</th>
+                                    <th>사용여부</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>997</td>
+                                    <td><a href="terms_classification_view.html">개인정보 제3자 제공에 따른 동의</a></td>
+                                    <td>2019. 07. 22</td>
+                                    <td>사용</td>
+                                </tr>
+                                <tr>
+                                    <td>997</td>
+                                    <td><a href="terms_classification_view.html">개인정보 제3자 제공에 따른 동의</a></td>
+                                    <td>2019. 07. 22</td>
+                                    <td>미사용</td>
+                                </tr>
+                                <tr>
+                                    <td>997</td>
+                                    <td><a href="terms_classification_view.html">개인정보 제3자 제공에 따른 동의</a></td>
+                                    <td>2019. 07. 22</td>
+                                    <td>사용</td>
+                                </tr>
+                                <tr>
+                                    <td>997</td>
+                                    <td><a href="terms_classification_view.html">개인정보 제3자 제공에 따른 동의</a></td>
+                                    <td>2019. 07. 22</td>
+                                    <td>미사용</td>
+                                </tr>
+                                <tr>
+                                    <td>997</td>
+                                    <td><a href="terms_classification_view.html">개인정보 제3자 제공에 따른 동의</a></td>
+                                    <td>2019. 07. 22</td>
+                                    <td>사용</td>
+                                </tr>
+                                <tr>
+                                    <td>997</td>
+                                    <td><a href="terms_classification_view.html">개인정보 제3자 제공에 따른 동의</a></td>
+                                    <td>2019. 07. 22</td>
+                                    <td>미사용</td>
+                                </tr>
+                                <tr>
+                                    <td>997</td>
+                                    <td><a href="terms_classification_view.html">개인정보 제3자 제공에 따른 동의</a></td>
+                                    <td>2019. 07. 22</td>
+                                    <td>사용</td>
+                                </tr>
+                                <tr>
+                                    <td>997</td>
+                                    <td><a href="terms_classification_view.html">개인정보 제3자 제공에 따른 동의</a></td>
+                                    <td>2019. 07. 22</td>
+                                    <td>미사용</td>
+                                </tr>
+                                <tr>
+                                    <td>997</td>
+                                    <td><a href="terms_classification_view.html">개인정보 제3자 제공에 따른 동의</a></td>
+                                    <td>2019. 07. 22</td>
+                                    <td>사용</td>
+                                </tr>
+                                <tr>
+                                    <td>997</td>
+                                    <td><a href="terms_classification_view.html">개인정보 제3자 제공에 따른 동의</a></td>
+                                    <td>2019. 07. 22</td>
+                                    <td>미사용</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <nav class="paging">
+                        <a class="first" href="#" aria-label="First"><i class="fas fa-angle-double-left"></i></a>
+                        <a class="prev" href="#" aria-label="Previous"><i class="fas fa-angle-left"></i></a>
+                        <a class="num" href="#">1</a>
+                        <a class="num" href="#">2</a>
+                        <strong>3</strong>
+                        <a class="num" href="#">4</a>
+                        <a class="num" href="#">5</a>
+                        <a class="next" href="#" aria-label="Next"><i class="fas fa-angle-right"></i></a>
+                        <a class="last" href="#" aria-label="Last"><i class="fas fa-angle-double-right"></i></a>
+                    </nav>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+        });
+    </script>
+
+</body>
+
+</html>

@@ -231,7 +231,6 @@ th {
 
 label {
   display: inline-block;
-  margin-bottom: 0.5rem;
 }
 
 button {
@@ -440,9 +439,6 @@ template {
       flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .no-gutters {
@@ -2533,6 +2529,7 @@ textarea.form-control {
   font-weight: 700;
   line-height: 1.872;
   color: #2f333d;
+  margin-bottom: 0.5rem;
 }
 
 .form-group > label.bg-light-danger {
@@ -2549,6 +2546,7 @@ textarea.form-control {
   display: block;
   margin-top: 0.25rem;
   color: #909090;
+  margin-bottom: 0;
 }
 
 .form-row {
@@ -3933,7 +3931,15 @@ input[type="button"].btn-block {
 }
 
 .btn.min-width {
-  width: 150px;
+  min-width: 150px;
+  padding-left: .5rem;
+  padding-right: .5rem;
+}
+
+.btn.min-width-120 {
+  min-width: 120px;
+  padding-left: .5rem;
+  padding-right: .5rem;
 }
 
 @media (max-width: 991.98px) {
@@ -3949,7 +3955,14 @@ input[type="button"].btn-block {
 
 @media (max-width: 767.98px) {
   .btn.min-width {
-    width: auto;
+    min-width: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .btn.min-width-120 {
+    min-width: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 
@@ -4717,7 +4730,7 @@ input[type="button"].btn-block {
 }
 
 .custom-radio .custom-control-input:checked ~ .custom-control-label::after {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='-4 -4 9 9'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
 }
 
 .custom-radio .custom-control-input:disabled:checked ~ .custom-control-label::before {
@@ -6798,12 +6811,55 @@ a.close.disabled {
   }
 }
 
+.modal.alert-style .modal-dialog {
+  max-width: 420px;
+}
+
+.modal.alert-style .modal-content {
+  min-height: 220px;
+}
+
 .modal.alert-style .modal-header::after {
   display: none;
 }
 
 .modal.alert-style .modal-body {
-  margin-top: -3rem;
+  margin-top: -2.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (max-width: 991.98px) {
+  .modal-header,
+  .modal-body,
+  .modal-footer {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .modal-header {
+    padding-bottom: 20px;
+  }
+  .modal-header::after {
+    width: calc(100% - (30px));
+    left: 15px;
+  }
+  .modal-header .close {
+    margin: -1.875rem -15px -1.875rem auto;
+  }
+  .modal-title {
+    font-size: 1.25rem;
+  }
 }
 
 .popover {

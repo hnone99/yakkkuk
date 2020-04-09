@@ -20,6 +20,7 @@ body,
 #content-block{padding-left: 15px;padding-right: 15px;padding-bottom: 50px;}
 
 .content{padding: 30px 15px;background-color: #fff;margin-bottom: 30px;}
+.content + .content{margin-top: -10px;}
 
 @include media-breakpoint-down(sm) {
     body{background: #fff;}

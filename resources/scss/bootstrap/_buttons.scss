@@ -144,7 +144,14 @@ input[type="button"] {
 }
 
 .btn.min-width{
-  width: 150px;
+  min-width: 150px;
+  padding-left: .5rem;
+  padding-right: .5rem;
+}
+.btn.min-width-120{
+  min-width: 120px;
+  padding-left: .5rem;
+  padding-right: .5rem;
 }
 
 @include media-breakpoint-down(md) {
@@ -157,7 +164,10 @@ input[type="button"] {
 }
 @include media-breakpoint-down(sm) {
   .btn.min-width{
-    width: auto;
+    min-width: auto;padding-left: 1rem;padding-right: 1rem;
+  }
+  .btn.min-width-120{
+    min-width: auto;padding-left: 1rem;padding-right: 1rem;
   }
 }
 

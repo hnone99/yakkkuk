@@ -1,4 +1,20 @@
-input[type=password]{font-family: serif;}
+input[type=password]{font-family: 'NanumGothic';font-weight: 400;}
+[data-datepicker]{
+    background-image: url('../images/icon_calendar.svg');
+    padding-right: calc(1.5em + .75rem);
+    background-repeat: no-repeat;
+    background-position: center right 14px;
+    background-size: 13px 14px;
+}
+[data-timepicker]{
+    background-image: url('../images/icon_clock.svg');
+    padding-right: calc(1.5em + .75rem);
+    background-repeat: no-repeat;
+    background-position: center right 14px;
+    background-size: 14px 14px;
+    background-color: #fff !important;
+    color: $body-color !important;
+}
 
 .body-login #content-block{padding: 0;height: 100%;}
 #login{
@@ -17,7 +33,7 @@ input[type=password]{font-family: serif;}
             margin-top: 1.8rem;
         }
         .form-control{
-            height: 48px;font-family: 'Nanum Gothic';
+            height: 48px;font-family: 'NanumGothic';
         }
         .btn{height: 48px;line-height: 37px;font-size: .875rem;}
         .menu{
@@ -82,27 +98,34 @@ input[type=password]{font-family: serif;}
     .btns [class^=col-]{padding-left: 5px;padding-right: 5px;}
 }
 
-[data-datepicker]{
-    background-image: url('../images/icon_calendar.svg');
-    padding-right: calc(1.5em + .75rem);
-    background-repeat: no-repeat;
-    background-position: center right 14px;
-    background-size: 13px 14px;
-}
-[data-timepicker]{
-    background-image: url('../images/icon_clock.svg');
-    padding-right: calc(1.5em + .75rem);
-    background-repeat: no-repeat;
-    background-position: center right 14px;
-    background-size: 14px 14px;
-    background-color: #fff !important;
-    color: $body-color !important;
-}
-
+.title-wrap,
 .table-top{
     margin-bottom: 10px;
     .row{align-items: center;justify-content: space-between;margin-left: -5px;margin-right: -5px;}
-    [class^=col-]{padding-left: 5px;padding-right: 5px;}
+    [class^=col-]{padding-left: 5px;padding-right: 5px;display: flex;align-items: center;margin-left: -5px;margin-right: -5px;}
+    [class^=col-] > *{margin: 0 5px;}
+    .form-control{height: calc(1.286em + 1rem + 2px);line-height: 1.286;}
+    .btn{line-height: 1.572;}
+}
+.section-btn{
+    .container-fluid{padding: 0;}
+    .row{margin-left: -5px;margin-right: -5px;}
+    [class^=col-] {display: flex;align-items: center;padding-left: 0;padding-right: 0;}
+    [class^=col-] > .btn{margin: 0 5px;}
+}
+@include media-breakpoint-down(sm) {
+    .title-wrap,
+    .table-top{
+        [class^=col-]{margin-left: -2px;margin-right: -2px;}
+        [class^=col-] > *{margin: 0 2px;}
+        .btn.min-width-120{padding-left: .5rem;padding-right: .5rem;}
+        .col-12:nth-child(even){justify-content: flex-end;}
+    }
+    .section-btn{
+        .container-fluid{padding: 0 15px;}
+        .row{margin-left: -2px;margin-right: -2px;}
+        [class^=col-] > .btn{margin: 0 2px;}
+    }
 }
 
 .table th,
@@ -239,4 +262,77 @@ input[type=password]{font-family: serif;}
             padding-left: .75rem;padding-right: .75rem;
         }
     }
+}
+
+.file-upload {
+    background-color: #b6b6b6;   
+    .image-upload-wrap {position: relative;border: 3px solid #b6b6b6;
+        .file-upload-input {position: absolute;margin: 0;padding: 0;width: 100%;height: 100%;outline: none;opacity: 0;cursor: pointer;}
+        .drag-text {
+            text-align: center;
+            p {
+                margin-bottom: 0;font-weight: 700;color: #fff;padding: 40px 0;font-size: 12px;
+                i{display: block;margin: 0 auto 10px;font-size: 40px;}
+            }
+        }
+        &:hover,
+        &.image-dropping{background-color: #999;border: 3px dashed #ffffff;}
+    }    
+    .file-upload-content {
+        display: none;text-align: center;
+        .file-upload-image {max-height: 400px;max-width:100%}
+
+        @at-root .excel .file-upload-content{display: none !important;}
+    }
+}
+.image-title-wrap {
+    color: $primary;font-size: 16px;font-weight: 700;margin-top: 10px;
+    > i{color: $dark;margin-right: 3px;}
+    .remove-image {width: 20px;height: 20px;line-height: 20px;text-align: center;margin: 0;color: #fff;background: #e0e0e0;border: none;padding: 0;margin-left: 5px;transition: all .15s ease;
+        i{font-size: 14px;}
+        &:hover {
+            background: $gray;
+        }
+    }    
+}
+
+.board-search{
+    display: inline-block;margin-right: .5rem;
+    .form-control{width: 180px;}
+    .btn{background-color: #3e4952;padding-left: 1rem;padding-right: 1rem;margin-left: .25rem;}
+}
+
+.medicine-taking-time{
+    margin-top:-3px;margin-bottom: -10px;
+    .col-4{padding-top: 3px;padding-bottom: 3px;}
+}
+
+.radio-and-form{
+    .form-control{width: auto;display: inline-block;}
+}
+@include media-breakpoint-down(sm) {
+    .radio-and-form{
+        display: block;margin-top: .5rem;
+        .form-control{width: 140px;display: inline-block;}
+    }
+}
+
+.terms-box{
+    height: 500px;padding: 20px;border: 1px solid #edeeef;overflow-x: hidden;
+}
+@include media-breakpoint-down(md) {
+    .terms-box{
+        height: 400px;padding: 15px;
+    }
+}
+
+i.new{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+    width: 18px;height: 18px;
+    background-image: url('../images/icon_new.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 18px 18px;
 }

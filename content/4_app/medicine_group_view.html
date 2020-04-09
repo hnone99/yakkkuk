@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>약꾹</title>
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta name="keywords" content="약꾹">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/MDTimePicker/mdtimepicker.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <!-- jquery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jquery -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- bootstrap -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- timepicker -->
+    <script src="../../resources/plugins/MDTimePicker/mdtimepicker.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header-block">
+            <!-- header include -->
+        </div>
+
+        <div id="location-block">
+            <!-- nav include -->
+        </div>
+
+        <div id="content-block">
+            <section class="content">
+                <div class="container-fluid">
+
+                    <div class="title-wrap">
+                        <div class="row">
+                            <div class="col-auto">
+                                <h2 class="title">그룹등록</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <form action="">
+                        <div class="form-wrap">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="formGroupName">그룹명</label>
+                                        <input type="text" class="form-control" id="formGroupName">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="formGroupLogo">그룹로고</label>
+                                        <div class="file-upload-wrap">
+                                            <div class="file-upload">
+                                                <div class="image-upload-wrap">
+                                                    <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*">
+                                                    <div class="drag-text">
+                                                        <p><i class="fas fa-image"></i>이미지 파일을 드래그하거나 아이콘을 터치하여, 이미지를 등록해 주세요.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="file-upload-content" style="display:none">
+                                                    <img class="file-upload-image" src="#" alt="your image">
+                                                </div>                                            
+                                            </div>
+                                            <div class="image-title-wrap" style="display:none">
+                                                <i class="fas fa-save"></i>
+                                                <span class="image-title">Uploaded Image</span>
+                                                <button type="button" onclick="removeUpload(this)" class="remove-image"><i class="fas fa-times"><span class="sr-only">이미지 삭제</span></i></button>
+                                            </div>
+                                        </div>
+                                        <small class="form-text mt-2">※ 가로 600px × 세로 400px 로 제작</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="formDesc">그룹설명</label>
+                                        <textarea name="" id="formDesc" class="form-control"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="rdoUseY">사용여부</label>
+                                        <div class="mt-3">
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" class="custom-control-input" id="rdoUseY" name="rdoUse">
+                                                <label class="custom-control-label" for="rdoUseY">사용</label>
+                                            </div>
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" class="custom-control-input" id="rdoUseN" name="rdoUse">
+                                                <label class="custom-control-label" for="rdoUseN">미사용</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <section class="content">
+                <div class="container-fluid">
+                    <div class="table-top">
+                        <div class="row">
+                            <div class="col-12 col-md-auto">
+                                <div class="board-search">
+                                    <input type="text" class="form-control d-inline-block w-auto" placeholder="약 이름 검색">
+                                    <button type="button" class="btn btn-dark">검색</button>
+                                </div>
+                                <span>총 <span class="text-danger">657</span> 건</span>
+                            </div>
+                            <div class="col-12 col-md-auto mt-2 mt-lg-0 text-right">
+                                <button type="reset" class="btn btn-success min-width-120">엑셀 양식다운로드</button>
+                                <button type="reset" class="btn btn-info min-width-120" data-toggle="modal" data-target="#modalExcelUpload">엑셀 일괄등록</button>
+                                <button type="reset" class="btn btn-gray-dark min-width-120" data-toggle="modal" data-target="#alertMedicineDel">약 삭제</button>
+                                <button type="reset" class="btn btn-primary min-width-120" data-toggle="modal" data-target="#modalMedicineAdd">약 등록</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-center table-hover">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <div class="custom-control custom-checkbox without-label">
+                                            <!-- 레이블 없는 단독 체크박스일때 .without-label -->
+                                            <input type="checkbox" class="custom-control-input" id="chkAll">
+                                            <label class="custom-control-label" for="chkAll"></label>
+                                        </div>
+                                    </th>
+                                    <th>No.</th>
+                                    <th>약 이름</th>
+                                    <th>복용횟수 (1일)</th>
+                                    <th>썸네일 등록</th>
+                                    <th>등록일</th>
+                                    <th>사용여부</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="custom-control custom-checkbox without-label">
+                                            <!-- 레이블 없는 단독 체크박스일때 .without-label -->
+                                            <input type="checkbox" class="custom-control-input" id="chk1_1">
+                                            <label class="custom-control-label" for="chk1_1"></label>
+                                        </div>
+                                    </td>
+                                    <td>997</td>
+                                    <td><label for="chk1_1">아스피린</label></td>
+                                    <td>10회</td>
+                                    <td>O</td>
+                                    <td>2019. 07. 22</td>
+                                    <td>사용</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="custom-control custom-checkbox without-label">
+                                            <input type="checkbox" class="custom-control-input" id="chk1_2">
+                                            <label class="custom-control-label" for="chk1_2"></label>
+                                        </div>
+                                    </td>
+                                    <td>996</td>
+                                    <td><label for="chk1_2">펜잘</label></td>
+                                    <td>5회</td>
+                                    <td>X</td>
+                                    <td>2019. 07. 22</td>
+                                    <td>미사용</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="custom-control custom-checkbox without-label">
+                                            <input type="checkbox" class="custom-control-input" id="chk1_3">
+                                            <label class="custom-control-label" for="chk1_3"></label>
+                                        </div>
+                                    </td>
+                                    <td>996</td>
+                                    <td><label for="chk1_3">펜잘</label></td>
+                                    <td>5회</td>
+                                    <td>X</td>
+                                    <td>2019. 07. 22</td>
+                                    <td>미사용</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <nav class="paging">
+                        <a class="first" href="#" aria-label="First"><i class="fas fa-angle-double-left"></i></a>
+                        <a class="prev" href="#" aria-label="Previous"><i class="fas fa-angle-left"></i></a>
+                        <a class="num" href="#">1</a>
+                        <a class="num" href="#">2</a>
+                        <strong>3</strong>
+                        <a class="num" href="#">4</a>
+                        <a class="num" href="#">5</a>
+                        <a class="next" href="#" aria-label="Next"><i class="fas fa-angle-right"></i></a>
+                        <a class="last" href="#" aria-label="Last"><i class="fas fa-angle-double-right"></i></a>
+                    </nav>
+                </div>
+            </section>
+            <section class="section-btn">
+                <div class="container-fluid">
+                    <div class="row justify-content-between">
+                        <div class="col-auto">
+                            
+                        </div>
+                        <div class="col-auto">
+                            <button type="button" class="btn btn-primary btn-lg min-width">저장</button>
+                            <button type="button" class="btn btn-cancel btn-lg min-width">취소</button>
+                            <button type="button" class="btn btn-gray-dark btn-lg min-width">삭제</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- modal : 약 등록 -->
+    <div class="modal" tabindex="-1" role="dialog" id="modalMedicineAdd">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">약 등록</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="formMedicineName" class="required">약 이름</label>
+                        <input type="text" class="form-control" id="formMedicineName">
+                    </div>
+                    <div class="form-group">
+                        <label for="formTakingCount" class="required">복용횟수</label>
+                        1일
+                        <select name="" id="formTakingCount" class="form-control d-inline-block ml-2 mr-2" style="width:120px">
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="" selected>3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
+                            <option value="">6</option>
+                            <option value="">7</option>
+                            <option value="">8</option>
+                            <option value="">9</option>
+                            <option value="">10</option>
+                        </select>
+                        회
+                    </div>
+                    <div class="form-group">
+                        <label for="formTakingTime" class="required">복용시간</label>
+                        <div class="row row-10 medicine-taking-time">
+                            <div class="col-4"><input type="text" class="form-control" id="formTakingTime" data-timepicker></div>
+                            <div class="col-4"><input type="text" class="form-control" data-timepicker></div>
+                            <div class="col-4"><input type="text" class="form-control" data-timepicker></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="formMedicineThumb" class="required">썸네일 등록</label>
+                        <div class="file-upload-wrap">
+                            <div class="file-upload">
+                                <div class="image-upload-wrap">
+                                    <input class="file-upload-input" id="formMedicineThumb" type='file' onchange="readURL(this);" accept="image/*">
+                                    <div class="drag-text">
+                                        <p><i class="fas fa-image"></i>엑셀 파일을 드래그하거나 아이콘을 터치하여, 엑셀을 등록해 주세요. </p>
+                                    </div>
+                                </div>
+                                <div class="file-upload-content" style="display:none">
+                                    <img class="file-upload-image" src="#" alt="your image">
+                                </div>
+                            </div>
+                            <div class="image-title-wrap" style="display:none">
+                                <i class="fas fa-save"></i>
+                                <span class="image-title">Uploaded Image</span>
+                                <button type="button" onclick="removeUpload(this)" class="remove-image"><i class="fas fa-times"><span class="sr-only">이미지 삭제</span></i></button>
+                            </div>
+                        </div>
+                        <small class="form-text mt-2">※ 가로 600px × 세로 400px 로 제작</small>
+                        <small class="form-text">※ 등록하지 않을 경우 디폴트 이미지가 보여집니다.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="formMedicineDesc">약 설명</label>
+                        <textarea name="" id="" class="form-control" style="min-height:90px" onKeyUp="javascript:fnChkByte(this,'80','#medicineDesc')"></textarea>
+                        <small class="form-text text-right"><span id="medicineDesc">0</span> byte / 80 byte</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="rdoUseMediY" class="required">사용여부</label>
+                        <div class="mt-3">
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="rdoUseMediY" name="rdoUseMedi">
+                                <label class="custom-control-label" for="rdoUseMediY">사용</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="rdoUseMediN" name="rdoUseMedi">
+                                <label class="custom-control-label" for="rdoUseMediN">미사용</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <!-- 등록 전 -->
+                    <div class="col-6">
+                        <button type="button" class="btn btn-primary btn-lg btn-block">등록</button>
+                    </div>
+                    <div class="col-6">
+                        <button type="button" class="btn btn-cancel btn-lg btn-block" data-dismiss="modal">취소</button>
+                    </div>
+                     <!-- 등록 후 -->
+                     <div class="col-4">
+                        <button type="button" class="btn btn-primary btn-lg btn-block">등록</button>
+                    </div>
+                    <div class="col-4">
+                        <button type="button" class="btn btn-cancel btn-lg btn-block" data-dismiss="modal">취소</button>
+                    </div>
+                    <div class="col-4">
+                        <button type="button" class="btn btn-gray-dark btn-lg btn-block" data-toggle="modal" data-target="#alertMedicineDel">삭제</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal : 엑셀 일괄 등록 -->
+    <div class="modal" tabindex="-1" role="dialog" id="modalExcelUpload">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">엑셀 일괄등록</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <small class="form-text">※ 엑셀 양식을 다운로드 받으신 후 해당 엑셀파일에 작성하여 등록해 주세요.</small>
+                    <small class="form-text">※ 엑셀 등록 후 각 약 별로 썸네일 이미지를 별도 등록해 주셔야 합니다.</small>
+                    <div class="form-group excel mt-3">
+                        <label for="formExcel" class="required">엑셀파일</label>
+                        <div class="file-upload-wrap">
+                            <div class="file-upload">
+                                <div class="image-upload-wrap">
+                                    <input class="file-upload-input" id="formExcel" type='file' onchange="readURL(this);" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
+                                    <div class="drag-text">
+                                        <p><i class="fas fa-file-excel"></i>엑셀 파일을 드래그하거나 아이콘을 터치하여, 엑셀을 등록해 주세요. </p>
+                                    </div>
+                                </div>
+                                <div class="file-upload-content" style="display:none">
+                                    <img class="file-upload-image" src="#" alt="your image">
+                                </div>
+                            </div>
+                            <div class="image-title-wrap" style="display:none">
+                                <i class="fas fa-save"></i>
+                                <span class="image-title">Uploaded Image</span>
+                                <button type="button" onclick="removeUpload(this)" class="remove-image"><i class="fas fa-times"><span class="sr-only">이미지 삭제</span></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="col-6">
+                        <button type="button" class="btn btn-primary btn-lg btn-block" id="btnExcelUploadConfirm">확인</button>
+                    </div>
+                    <div class="col-6">
+                        <button type="button" class="btn btn-cancel btn-lg btn-block" data-dismiss="modal">취소</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- alert : 엑셀 일괄 등록 확인 -->
+    <div class="modal alert-style" tabindex="-1" role="dialog" id="alertExcelUpload">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-center">약 엑셀등록이 완료되었습니다. <br>확인버튼 클릭 시 화면이 새로고침 됩니다.</p>
+                </div>
+                <div class="modal-footer">
+                    <div class="col-6">
+                        <button type="button" class="btn btn-primary btn-block" data-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- alert : 버전 삭제 확인 -->
+    <div class="modal alert-style" tabindex="-1" role="dialog" id="alertMedicineDel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-center">아시피린 약을 삭제하시겠습니까? <br>확인버튼 클릭 시 삭제되며, 복구할 수 없습니다.</p>
+                </div>
+                <div class="modal-footer">
+                    <div class="col-6">
+                        <button type="button" class="btn btn-primary btn-block">확인</button>
+                    </div>
+                    <div class="col-6">
+                        <button type="button" class="btn btn-cancel btn-block" data-dismiss="modal">취소</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        //이미지 업로드
+        function readURL(input) {
+            var t = $(input).closest('.file-upload-wrap');
+            if (input.files && input.files[0]) {
+
+                var reader = new FileReader();
+
+                reader.onload = function(e) {
+                    t.find('.image-upload-wrap').hide();
+
+                    t.find('.file-upload-image').attr('src', e.target.result);
+                    t.find('.file-upload-content').show();
+                    t.find('.image-title-wrap').show();
+
+                    t.find('.image-title').html(input.files[0].name);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+
+            } else {
+                removeUpload();
+            }
+        }
+        function removeUpload(del) {
+            var t = $(del).closest('.file-upload-wrap');
+            t.find('.file-upload-input').replaceWith(t.find('.file-upload-input').clone());
+            t.find('.file-upload-content').hide();
+            t.find('.image-title-wrap').hide();
+            t.find('.image-upload-wrap').show();
+        }
+        $('.image-upload-wrap').on('dragover', function () {
+            $(this).addClass('image-dropping');
+        });
+        $('.image-upload-wrap').on('dragleave', function () {
+            $(this).removeClass('image-dropping');
+        });
+
+        $(document).ready(function(){
+            $('#btnExcelUploadConfirm').on('click',function(){
+                $('#modalExcelUpload').modal('hide');
+                $('#alertExcelUpload').modal('show');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
