@@ -71,7 +71,8 @@ var Header = Header || {};
         el.item = el.find('.depth1');
         el.itemEl = el.item.find('> li > a');
 
-        el.itemEl.on('mouseenter focus',function(){
+        el.itemEl.on('mouseenter focus click',function(e){
+            e.preventDefault();
             $(this).closest('li').siblings().removeClass('hover');
             $(this).closest('li').addClass('hover');
         });
