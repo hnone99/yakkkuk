@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>약꾹</title>
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta name="keywords" content="약꾹">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/MDTimePicker/mdtimepicker.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <!-- jquery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jquery -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- bootstrap -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- timepicker -->
+    <script src="../../resources/plugins/MDTimePicker/mdtimepicker.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header-block">
+            <!-- header include -->
+        </div>
+
+        <div id="location-block">
+            <!-- nav include -->
+        </div>
+
+        <div id="content-block">
+            <section class="content">
+                <div class="container-fluid">
+
+                    <div class="title-wrap">
+                        <div class="row">
+                            <div class="col-6">
+                                <h2 class="title">권한정보</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-wrap">
+                        <div class="form-group">
+                            <label for="formAuth" class="required">권한명</label>
+                            <input type="text" class="form-control" id="formAuth">
+                        </div>
+                        <div class="form-group">
+                            <label for="formExplain">권한설명</label>
+                            <input type="text" class="form-control" id="formExplain">
+                        </div>
+                    </div>
+
+                    <div class="title-wrap">
+                        <div class="row">
+                            <div class="col-6">
+                                <h2 class="title">권한지정</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-wrap">
+                        <div class="row align-items-start">
+                            <div class="col-12 col-md-6">
+                                <div class="form-group">
+                                    <label>1뎁스 메뉴</label>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="menu1">
+                                                <label class="custom-control-label text-primary" for="menu1">회원관리</label>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="menu2">
+                                                <label class="custom-control-label text-primary" for="menu2">버튼관리</label>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="menu3">
+                                                <label class="custom-control-label text-primary" for="menu3">기관/관리자 관리</label>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="menu4">
+                                                <label class="custom-control-label text-primary" for="menu4">앱 관리</label>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="menu5">
+                                                <label class="custom-control-label text-primary" for="menu5">접속로그 관리</label>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="menu6">
+                                                <label class="custom-control-label text-primary" for="menu6">1대1 문의관리</label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="form-group">
+                                    <label>2뎁스 메뉴</label>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="menu1_1">
+                                                <label class="custom-control-label" for="menu1_1">회원관리</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="menu1_2">
+                                                <label class="custom-control-label" for="menu1_2">탈퇴회원관리</label>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="menu2_1">
+                                                <label class="custom-control-label" for="menu2_1">버튼관리</label>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="menu3_1">
+                                                <label class="custom-control-label" for="menu3_1">기관관리</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="menu3_2">
+                                                <label class="custom-control-label" for="menu3_2">관리자 관리</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="menu3_3">
+                                                <label class="custom-control-label" for="menu3_3">관리자권한 관리</label>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="menu4_1">
+                                                <label class="custom-control-label" for="menu4_1">앱버전 관리</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="menu4_2">
+                                                <label class="custom-control-label" for="menu4_2">약관종류 관리</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="menu4_3">
+                                                <label class="custom-control-label" for="menu4_3">약관 관리</label>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="menu5_1">
+                                                <label class="custom-control-label" for="menu5_1">운영자 접속 로그</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="menu5_2">
+                                                <label class="custom-control-label" for="menu5_2">마스킹 해제 로그</label>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="menu6_1">
+                                                <label class="custom-control-label" for="menu6_1">1대1 문의관리</label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="title-wrap">
+                        <div class="row">
+                            <div class="col-6">
+                                <h2 class="title">사용여부</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-wrap">
+                        <div class="form-group">
+                            <label for="rdoUseY">사용여부</label>
+                            <div class="form-group mt-3">
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="rdoUseY" name="rdoUse">
+                                    <label class="custom-control-label" for="rdoUseY">사용</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="rdoUseN" name="rdoUse">
+                                    <label class="custom-control-label" for="rdoUseN">미사용</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <section>
+                <div class="container-fluid">
+                    <div class="row justify-content-between">
+                        <div class="col-auto">
+
+                        </div>
+                        <div class="col-auto">
+                            <button type="button" class="btn btn-primary btn-lg min-width">저장</button>
+                            <button type="button" class="btn btn-cancel btn-lg min-width">취소</button>
+                            <button type="button" class="btn btn-gray-dark btn-lg min-width">삭제</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+        });
+    </script>
+
+</body>
+
+</html>

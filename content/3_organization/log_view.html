@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>약꾹</title>
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta name="keywords" content="약꾹">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/MDTimePicker/mdtimepicker.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <!-- jquery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jquery -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- bootstrap -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- timepicker -->
+    <script src="../../resources/plugins/MDTimePicker/mdtimepicker.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header-block">
+            <!-- header include -->
+        </div>
+
+        <div id="location-block">
+            <!-- nav include -->
+        </div>
+
+        <div id="content-block">
+            <section class="content">
+                <div class="container-fluid">
+
+                    <div class="title-wrap">
+                        <div class="row">
+                            <div class="col-auto">
+                                <h2 class="title">관리자 접속 기본정보</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <form action="">
+                        <div class="form-wrap">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <label>최근 접속시간</label>
+                                        <div class="form-fake">
+                                            2019.03.08 15:17:30
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <label>기관명</label>
+                                        <div class="form-fake">
+                                            주식회사 △△
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <label>이름</label>
+                                        <div class="form-fake">
+                                            김이름
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <label>권한</label>
+                                        <div class="form-fake">
+                                            상담원
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <label>최근 접속 IP</label>
+                                        <div class="row row-10">
+                                            <div class="col-9">
+                                                <div class="form-fake">
+                                                    220.72.3.64
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <button type="button" class="btn btn-dark btn-block btn-square" data-toggle="modal" data-target="#modalIp">IP 접속이력</button>
+                                            </div>
+                                        </div>                                        
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <label>접속환경</label>
+                                        <div class="form-fake">
+                                            Windows / Chrome
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>조회기간</label>
+                                <div class="row">
+                                    <div class="col-12 col-md-6">
+                                        <div class="row row-10">
+                                            <div class="col-6">
+                                                <input type="text" id="formPeriod" class="form-control" data-datepicker placeholder="시작일">
+                                            </div>
+                                            <div class="col-6">
+                                                <input type="text" class="form-control" data-datepicker placeholder="종료일">
+                                            </div>
+                                        </div>
+                                    </div>                                            
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btns row">
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-gray-dark btn-block"><i class="fas fa-search"></i> 검색</button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="title-wrap">
+                        <div class="row">
+                            <div class="col-auto">
+                                <h2 class="title">버튼 사용이력</h2>
+                                <span class="ml-2">총 <span class="text-danger">657</span> 건</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-center table-hover">
+                            <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>메뉴별 접속시간</th>
+                                    <th>접속메뉴</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>10</td>
+                                    <td>2020-01-22-09:00</td>
+                                    <td>
+                                        기관/관리자 관리 &gt; 기관 관리 &gt; 기관 관리 상세
+                                        <button type="button" class="btn btn-dark btn-sm ml-4" data-toggle="modal" data-target="#modalDetail">상세조회</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>2020-01-22-09:00</td>
+                                    <td>
+                                        기관/관리자 관리 &gt; 기관 관리 &gt; 기관 관리 상세
+                                        <button type="button" class="btn btn-dark btn-sm ml-4" data-toggle="modal" data-target="#modalDetail">상세조회</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>2020-01-22-09:00</td>
+                                    <td>
+                                        기관/관리자 관리 &gt; 기관 관리 &gt; 기관 관리 상세
+                                        <button type="button" class="btn btn-dark btn-sm ml-4" data-toggle="modal" data-target="#modalDetail">상세조회</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>2020-01-22-09:00</td>
+                                    <td>
+                                        기관/관리자 관리 &gt; 기관 관리 &gt; 기관 관리 상세
+                                        <button type="button" class="btn btn-dark btn-sm ml-4" data-toggle="modal" data-target="#modalDetail">상세조회</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>2020-01-22-09:00</td>
+                                    <td>
+                                        기관/관리자 관리 &gt; 기관 관리 &gt; 기관 관리 상세
+                                        <button type="button" class="btn btn-dark btn-sm ml-4" data-toggle="modal" data-target="#modalDetail">상세조회</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>2020-01-22-09:00</td>
+                                    <td>
+                                        기관/관리자 관리 &gt; 기관 관리 &gt; 기관 관리 상세
+                                        <button type="button" class="btn btn-dark btn-sm ml-4" data-toggle="modal" data-target="#modalDetail">상세조회</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>2020-01-22-09:00</td>
+                                    <td>
+                                        기관/관리자 관리 &gt; 기관 관리 &gt; 기관 관리 상세
+                                        <button type="button" class="btn btn-dark btn-sm ml-4" data-toggle="modal" data-target="#modalDetail">상세조회</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>2020-01-22-09:00</td>
+                                    <td>
+                                        기관/관리자 관리 &gt; 기관 관리 &gt; 기관 관리 상세
+                                        <button type="button" class="btn btn-dark btn-sm ml-4" data-toggle="modal" data-target="#modalDetail">상세조회</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>2020-01-22-09:00</td>
+                                    <td>
+                                        기관/관리자 관리 &gt; 기관 관리 &gt; 기관 관리 상세
+                                        <button type="button" class="btn btn-dark btn-sm ml-4" data-toggle="modal" data-target="#modalDetail">상세조회</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <nav class="paging">
+                        <a class="first" href="#" aria-label="First"><i class="fas fa-angle-double-left"></i></a>
+                        <a class="prev" href="#" aria-label="Previous"><i class="fas fa-angle-left"></i></a>
+                        <a class="num" href="#">1</a>
+                        <a class="num" href="#">2</a>
+                        <strong>3</strong>
+                        <a class="num" href="#">4</a>
+                        <a class="num" href="#">5</a>
+                        <a class="next" href="#" aria-label="Next"><i class="fas fa-angle-right"></i></a>
+                        <a class="last" href="#" aria-label="Last"><i class="fas fa-angle-double-right"></i></a>
+                    </nav>
+                </div>
+            </section>
+            <section>
+                <div class="container-fluid">
+                    <div class="row justify-content-between">
+                        <div class="col-auto">
+                            <button type="button" class="btn btn-reset btn-lg" onclick="history.back()">목록</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- modal : IP 접속이력 -->
+    <div class="modal" tabindex="-1" role="dialog" id="modalIp">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">IP 접속이력</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-thead-bg text-center mb-0">
+                        <colgroup>
+                            <col style="width:50%">
+                            <col>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>접속일시</th>
+                                <th>접속 IP</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2019.03.29 16:16:21</td>
+                                <td>22.54.51.236</td>
+                            </tr>
+                            <tr>
+                                <td>2019.03.29 16:16:21</td>
+                                <td>22.54.51.236</td>
+                            </tr>
+                            <tr>
+                                <td>2019.03.29 16:16:21</td>
+                                <td>22.54.51.236</td>
+                            </tr>
+                            <tr>
+                                <td>2019.03.29 16:16:21</td>
+                                <td>22.54.51.236</td>
+                            </tr>
+                            <tr>
+                                <td>2019.03.29 16:16:21</td>
+                                <td>22.54.51.236</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <div class="col-12">
+                        <button type="button" class="btn btn-dark btn-block btn-lg">더보기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal :상세조회 -->
+    <div class="modal" tabindex="-1" role="dialog" id="modalDetail">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">상세조회</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-thead-bg text-center mb-0">
+                        <colgroup>
+                            <col style="width:50%">
+                            <col>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>파라메타 명</th>
+                                <th>파라메타 값</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>sortColumn</td>
+                                <td>regDesc</td>
+                            </tr>
+                            <tr>
+                                <td>sortColumn</td>
+                                <td>regDesc</td>
+                            </tr>
+                            <tr>
+                                <td>sortColumn</td>
+                                <td>regDesc</td>
+                            </tr>
+                            <tr>
+                                <td>sortColumn</td>
+                                <td>regDesc</td>
+                            </tr>
+                            <tr>
+                                <td>sortColumn</td>
+                                <td>regDesc</td>
+                            </tr>
+                            <tr>
+                                <td>sortColumn</td>
+                                <td>regDesc</td>
+                            </tr>
+                            <tr>
+                                <td>sortColumn</td>
+                                <td>regDesc</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            
+        });
+    </script>
+
+</body>
+
+</html>

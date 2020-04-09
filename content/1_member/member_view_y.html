@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>약꾹</title>
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta name="keywords" content="약꾹">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/MDTimePicker/mdtimepicker.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <!-- jquery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jquery -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- bootstrap -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- timepicker -->
+    <script src="../../resources/plugins/MDTimePicker/mdtimepicker.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header-block">
+            <!-- header include -->
+        </div>
+
+        <div id="location-block">
+            <!-- nav include -->
+        </div>
+
+        <div id="content-block">
+            <section class="content">
+                <div class="container-fluid">
+                    <div class="title-wrap">
+                        <div class="row">
+                            <div class="col-auto">
+                                <h2 class="title">기본정보</h2>
+                            </div>
+                            <div class="col-auto">
+                                <button type="button" class="btn btn-danger">개인정보 마스킹 해제</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-wrap">
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class="form-group">
+                                    <label>사용자코드</label>
+                                    <div class="form-fake">
+                                        12-2050-7809
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="form-group">
+                                    <label>가입경로</label>
+                                    <div class="form-fake">
+                                        카카오
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class="form-group">
+                                    <label>회원명</label>
+                                    <div class="form-fake">
+                                        이*재
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="form-group">
+                                    <label>ID</label>
+                                    <div class="form-fake">
+                                        woo***nim
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class="form-group">
+                                    <label>휴대전화 번호</label>
+                                    <div class="form-fake">
+                                        010-25**-**91
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="form-group">
+                                    <label for="formPw">비밀번호</label>
+                                    <button type="button" class="btn btn-dark btn-block btn-square" id="formPw" data-toggle="modal" data-target="#alertPwReset">비밀번호 초기화</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class="form-group">
+                                    <label>가입일시</label>
+                                    <div class="form-fake">
+                                        2020-01-22 09:00
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="form-group">
+                                    <label>회원상태</label>
+                                    <div class="form-fake">
+                                        정상
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class="form-group">
+                                    <label>이용 OS</label>
+                                    <div class="form-fake">
+                                        Android 10.0
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="form-group">
+                                    <label>기관</label>
+                                    <div class="form-fake">
+                                        (주) 엘지생활건강
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="title-wrap">
+                        <div class="row">
+                            <div class="col-auto">
+                                <h2 class="title">버튼 등록이력</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-center table-hover">
+                            <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>버튼 ID</th>
+                                    <th>등록일</th>
+                                    <th>상태</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>10</td>
+                                    <td>U3:D8 (AA:BB:11:22:U3:D8)</td>
+                                    <td>2020-01-22-09:00</td>
+                                    <td>등록</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>U3:D8 (AA:BB:11:22:U3:D8)</td>
+                                    <td>2020-01-22-09:00</td>
+                                    <td>해지</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <nav class="paging">
+                        <a class="first" href="#" aria-label="First"><i class="fas fa-angle-double-left"></i></a>
+                        <a class="prev" href="#" aria-label="Previous"><i class="fas fa-angle-left"></i></a>
+                        <a class="num" href="#">1</a>
+                        <a class="num" href="#">2</a>
+                        <strong>3</strong>
+                        <a class="num" href="#">4</a>
+                        <a class="num" href="#">5</a>
+                        <a class="next" href="#" aria-label="Next"><i class="fas fa-angle-right"></i></a>
+                        <a class="last" href="#" aria-label="Last"><i class="fas fa-angle-double-right"></i></a>
+                    </nav>
+
+                    <div class="title-wrap">
+                        <div class="row">
+                            <div class="col-auto">
+                                <h2 class="title">복약스케줄</h2>
+                            </div>
+                            <div class="col-auto">
+                                <button type="button" class="btn btn-primary-dark" data-toggle="modal" data-target="#modalSchedule"><span class="d-none d-sm-inline">복약</span>스케줄 등록</button>
+                                <button type="button" class="btn btn-info"><span class="d-none d-sm-inline">복약</span>스케줄 전체 엑셀 <span class="d-none d-sm-inline">다운로드</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-center table-hover">
+                            <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>상태</th>
+                                    <th>등록</th>
+                                    <th>등록일시</th>
+                                    <th>복용요일</th>
+                                    <th>복용시간</th>
+                                    <th>약 이름</th>
+                                    <th>알람설정여부</th>
+                                    <th>상세</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>10</td>
+                                    <td>사용</td>
+                                    <td>회원</td>
+                                    <td>2020-01-22</td>
+                                    <td>
+                                        <div class="taking-day">
+                                            <span>일</span>
+                                            <span class="active">월</span>
+                                            <span class="active">화</span>
+                                            <span class="active">수</span>
+                                            <span class="active">목</span>
+                                            <span>금</span>
+                                            <span>토</span>
+                                        </div>
+                                    </td>
+                                    <td>08:00 외 2건</td>
+                                    <td>아프니벤큐 외 2건</td>
+                                    <td>사용</td>
+                                    <td><button type="button" class="btn btn-dark btn-sm" onclick="window.location.href='member_detail.html'">상세보기</button></td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td class="text-underline text-danger">미사용</td>
+                                    <td>관리자</td>
+                                    <td>2020-01-22</td>
+                                    <td>
+                                        <div class="taking-day">
+                                            <span class="active">일</span>
+                                            <span class="active">월</span>
+                                            <span class="active">화</span>
+                                            <span class="active">수</span>
+                                            <span class="active">목</span>
+                                            <span class="active">금</span>
+                                            <span class="active">토</span>
+                                        </div>
+                                    </td>
+                                    <td>13:25</td>
+                                    <td>센트롬</td>
+                                    <td>미사용</td>
+                                    <td><button type="button" class="btn btn-dark btn-sm" onclick="window.location.href='member_detail.html'">상세보기</button></td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>삭제</td>
+                                    <td>회원</td>
+                                    <td>2020-01-22</td>
+                                    <td>
+                                        <div class="taking-day">
+                                            <span>일</span>
+                                            <span>월</span>
+                                            <span>화</span>
+                                            <span>수</span>
+                                            <span>목</span>
+                                            <span>금</span>
+                                            <span>토</span>
+                                        </div>
+                                    </td>
+                                    <td>13:25</td>
+                                    <td>센트롬</td>
+                                    <td>삭제</td>
+                                    <td><button type="button" class="btn btn-dark btn-sm" onclick="window.location.href='member_detail.html'">상세보기</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <nav class="paging">
+                        <a class="first" href="#" aria-label="First"><i class="fas fa-angle-double-left"></i></a>
+                        <a class="prev" href="#" aria-label="Previous"><i class="fas fa-angle-left"></i></a>
+                        <a class="num" href="#">1</a>
+                        <a class="num" href="#">2</a>
+                        <strong>3</strong>
+                        <a class="num" href="#">4</a>
+                        <a class="num" href="#">5</a>
+                        <a class="next" href="#" aria-label="Next"><i class="fas fa-angle-right"></i></a>
+                        <a class="last" href="#" aria-label="Last"><i class="fas fa-angle-double-right"></i></a>
+                    </nav>
+                </div>
+            </section>
+            <section>
+                <div class="container-fluid">
+                    <div class="row justify-content-between">
+                        <div class="col-auto">
+                            <button type="button" class="btn btn-reset btn-lg" onclick="history.back()">목록</button>
+                        </div>
+                        <div class="col-auto">
+                            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modalWithdraw">회원탈퇴 처리</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- modal : 복약스케줄 등록 -->
+    <div class="modal" tabindex="-1" role="dialog" id="modalSchedule">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">복약스케줄 등록</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-wrap">
+                        <div class="form-group">
+                            <label for="dayChk1">복용요일 선택</label>
+                            <div class="taking-day-check">
+                                <span class="item">
+                                    <input type="checkbox" id="dayChk1">
+                                    <label for="dayChk1">일</label>
+                                </span>
+                                <span class="item">
+                                    <input type="checkbox" id="dayChk2">
+                                    <label for="dayChk2">월</label>
+                                </span>
+                                <span class="item">
+                                    <input type="checkbox" id="dayChk3">
+                                    <label for="dayChk3">화</label>
+                                </span>
+                                <span class="item">
+                                    <input type="checkbox" id="dayChk4">
+                                    <label for="dayChk4">수</label>
+                                </span>
+                                <span class="item">
+                                    <input type="checkbox" id="dayChk5">
+                                    <label for="dayChk5">목</label>
+                                </span>
+                                <span class="item">
+                                    <input type="checkbox" id="dayChk6">
+                                    <label for="dayChk6">금</label>
+                                </span>
+                                <span class="item">
+                                    <input type="checkbox" id="dayChk7">
+                                    <label for="dayChk7">토</label>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="formTime">복용시간 선택</label>
+                            <!-- 추가/삭제 될수 있는 그룹 .set -->
+                            <div class="set">
+                                <input type="text" class="form-control" id="formTime" data-timepicker>
+                                <button type="button" class="btn btn-dark btn-block btn-square">추가</button>
+                            </div>
+                            <div class="set">
+                                <input type="text" class="form-control" data-timepicker>
+                                <div class="row row-10">
+                                    <div class="col-6"><button type="button" class="btn btn-dark btn-block btn-square">추가</button></div>
+                                    <div class="col-6"><button type="button" class="btn btn-cancel btn-block btn-square">삭제</button></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="formMedicineName">약이름 / 컬러 선택</label>
+                            <!-- 추가/삭제 될수 있는 그룹 .set -->
+                            <div class="set">
+                                <input type="text" class="form-control" id="formMedicineName">
+                                <div class="medicine-color-pick">
+                                    <span class="item c1">
+                                        <input type="radio" id="color1" name="rdoColor">
+                                        <label for="color1"><span class="sr-only">빨강</span></label>
+                                    </span>
+                                    <span class="item c2">
+                                        <input type="radio" id="color2" name="rdoColor">
+                                        <label for="color2"><span class="sr-only">주황</span></label>
+                                    </span>
+                                    <span class="item c3">
+                                        <input type="radio" id="color3" name="rdoColor">
+                                        <label for="color3"><span class="sr-only">노랑</span></label>
+                                    </span>
+                                    <span class="item c4">
+                                        <input type="radio" id="color4" name="rdoColor">
+                                        <label for="color4"><span class="sr-only">초록</span></label>
+                                    </span>
+                                    <span class="item c5">
+                                        <input type="radio" id="color5" name="rdoColor">
+                                        <label for="color5"><span class="sr-only">하늘</span></label>
+                                    </span>
+                                    <span class="item c6">
+                                        <input type="radio" id="color6" name="rdoColor">
+                                        <label for="color6"><span class="sr-only">파랑</span></label>
+                                    </span>
+                                    <span class="item c7">
+                                        <input type="radio" id="color7" name="rdoColor">
+                                        <label for="color7"><span class="sr-only">보라</span></label>
+                                    </span>
+                                    <span class="item c8">
+                                        <input type="radio" id="color8" name="rdoColor">
+                                        <label for="color8"><span class="sr-only">황토</span></label>
+                                    </span>
+                                    <span class="item c9">
+                                        <input type="radio" id="color9" name="rdoColor">
+                                        <label for="color9"><span class="sr-only">갈색</span></label>
+                                    </span>
+                                    <span class="item c10">
+                                        <input type="radio" id="color10" name="rdoColor">
+                                        <label for="color10"><span class="sr-only">검정</span></label>
+                                    </span>
+                                </div>
+                                <button type="button" class="btn btn-dark btn-block btn-square">추가</button>
+                            </div>
+                            <div class="set">
+                                <input type="text" class="form-control">
+                                <div class="medicine-color-pick">
+                                    <span class="item c1">
+                                        <input type="radio" id="color2_1" name="rdoColor2">
+                                        <label for="color2_1"><span class="sr-only">빨강</span></label>
+                                    </span>
+                                    <span class="item c2">
+                                        <input type="radio" id="color2_2" name="rdoColor2">
+                                        <label for="color2_2"><span class="sr-only">주황</span></label>
+                                    </span>
+                                    <span class="item c3">
+                                        <input type="radio" id="color2_3" name="rdoColor2">
+                                        <label for="color2_3"><span class="sr-only">노랑</span></label>
+                                    </span>
+                                    <span class="item c4">
+                                        <input type="radio" id="color2_4" name="rdoColor2">
+                                        <label for="color2_4"><span class="sr-only">초록</span></label>
+                                    </span>
+                                    <span class="item c5">
+                                        <input type="radio" id="color2_5" name="rdoColor2">
+                                        <label for="color2_5"><span class="sr-only">하늘</span></label>
+                                    </span>
+                                    <span class="item c6">
+                                        <input type="radio" id="color2_6" name="rdoColor2">
+                                        <label for="color2_6"><span class="sr-only">파랑</span></label>
+                                    </span>
+                                    <span class="item c7">
+                                        <input type="radio" id="color2_7" name="rdoColor2">
+                                        <label for="color2_7"><span class="sr-only">보라</span></label>
+                                    </span>
+                                    <span class="item c8">
+                                        <input type="radio" id="color2_8" name="rdoColor2">
+                                        <label for="color2_8"><span class="sr-only">황토</span></label>
+                                    </span>
+                                    <span class="item c9">
+                                        <input type="radio" id="color2_9" name="rdoColor2">
+                                        <label for="color2_9"><span class="sr-only">갈색</span></label>
+                                    </span>
+                                    <span class="item c10">
+                                        <input type="radio" id="color2_10" name="rdoColor2">
+                                        <label for="color2_10"><span class="sr-only">검정</span></label>
+                                    </span>
+                                </div>
+                                <div class="row row-10">
+                                    <div class="col-6"><button type="button" class="btn btn-dark btn-block btn-square">추가</button></div>
+                                    <div class="col-6"><button type="button" class="btn btn-cancel btn-block btn-square">삭제</button></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group mt-3">
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="rdoUseY" name="rdoUse">
+                                <label class="custom-control-label" for="rdoUseY">사용</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="rdoUseN" name="rdoUse">
+                                <label class="custom-control-label" for="rdoUseN">미사용</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="col-6">
+                        <button type="button" class="btn btn-primary btn-lg btn-block">등록</button>
+                    </div>
+                    <div class="col-6">
+                        <button type="button" class="btn btn-cancel btn-lg btn-block" data-dismiss="modal">취소</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal : 회원탈퇴 처리 -->
+    <div class="modal" tabindex="-1" role="dialog" id="modalWithdraw">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">회원탈퇴</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-wrap">
+                        <div class="form-group">
+                            <label for="formWithdrawUserName">회원명</label>
+                            <input type="text" class="form-control" id="formWithdrawUserName" value="이*재" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="formWithdrawReason">탈퇴사유</label>
+                            <small class="form-text mb-2">탈퇴처리 사유를 상세하게 입력하세요.</small>
+                            <textarea name="" class="form-control" id="formWithdrawReason"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="col-6">
+                        <button type="button" class="btn btn-primary btn-lg btn-block" id="btnWithdrawOk">확인</button>
+                    </div>
+                    <div class="col-6">
+                        <button type="button" class="btn btn-cancel btn-lg btn-block" data-dismiss="modal">취소</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- alert : 회원탈퇴 처리 확인 -->
+    <div class="modal alert-style" tabindex="-1" role="dialog" id="alertWithdrawConfirm"> <!-- .alert-style 추가!!!! -->
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-alert mt-3">
+                        이*재 회원님을 <br>
+                        <sapn class="text-primary">탈퇴처리 하시겠습니까?</sapn> <br>
+                    </p>
+                    <p class="text-center">확인버튼 클릭 시 탈퇴처리 되며, 다시 복구되지 않습니다.</p>
+                </div>
+                <div class="modal-footer">
+                    <div class="col-6">
+                        <button type="button" class="btn btn-primary btn-lg btn-block" id="btnWithdrawOk">확인</button>
+                    </div>
+                    <div class="col-6">
+                        <button type="button" class="btn btn-cancel btn-lg btn-block" data-dismiss="modal">취소</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- alert : 비밀번호 초기화-->
+    <div class="modal alert-style" tabindex="-1" role="dialog" id="alertPwReset"> <!-- .alert-style 추가!!!! -->
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-alert mt-3">
+                        이*재 회원님의 <br>
+                        <sapn class="text-primary">비밀번호를 초기화 하시겠습니까?</sapn>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <div class="col-6">
+                        <button type="button" class="btn btn-primary btn-lg btn-block" data-dismiss="modal">확인</button>
+                    </div>
+                    <div class="col-6">
+                        <button type="button" class="btn btn-cancel btn-lg btn-block" data-dismiss="modal">취소</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $('#btnWithdrawOk').on('click',function(){
+                $('#modalWithdraw').modal('hide');
+                $('#alertWithdrawConfirm').modal('show');
+            });
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>약꾹</title>
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta name="keywords" content="약꾹">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/MDTimePicker/mdtimepicker.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <!-- jquery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jquery -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- bootstrap -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- timepicker -->
+    <script src="../../resources/plugins/MDTimePicker/mdtimepicker.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header-block">
+            <!-- header include -->
+        </div>
+
+        <div id="location-block">
+            <!-- nav include -->
+        </div>
+
+        <div id="content-block">
+            <section class="content">
+                <div class="container-fluid">
+
+                    <div class="title-wrap">
+                        <div class="row">
+                            <div class="col-auto">
+                                <h2 class="title">서비스 관리</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <form action="">
+                        <div class="form-wrap">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <label for="formCode">서비스 코드</label>
+                                        <input type="text" class="form-control" id="formCode">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <label for="formServiceTitle" class="required">서비스 명</label>
+                                        <input type="text" class="form-control" id="formServiceTitle">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="rdoService1" class="required">서비스 구분</label>
+                                        <div class="form-group mt-3">
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" class="custom-control-input" id="rdoService1" name="rdoService">
+                                                <label class="custom-control-label" for="rdoService1">기본 서비스</label>
+                                            </div>
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" class="custom-control-input" id="rrdoService2" name="rdoService">
+                                                <label class="custom-control-label" for="rrdoService2">제조사포함 서비스</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label>약 그룹 선택</label>
+                                        <div class="row">
+                                            <div class="col-12 col-md-auto">
+                                                <button type="button" class="btn btn-dark btn-square min-width" data-toggle="modal" data-target="#modalManufacturer">약 그룹 선택</button>
+                                            </div>
+                                            <div class="col-12 col-md-auto">
+                                                <div class="selected-box-wrap">
+                                                    <div class="box">
+                                                        <p>△△제약</p>
+                                                        <a href="javascript:;"><i class="fas fa-times"><span class="sr-only">삭제</span></i></a>
+                                                    </div>
+                                                    <div class="box">
+                                                        <p>△△제약</p>
+                                                        <a href="javascript:;"><i class="fas fa-times"><span class="sr-only">삭제</span></i></a>
+                                                    </div>
+                                                    <div class="box">
+                                                        <p>△△제약</p>
+                                                        <a href="javascript:;"><i class="fas fa-times"><span class="sr-only">삭제</span></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="formDesc">서비스 설명</label>
+                                        <textarea name="" id="formDesc" class="form-control"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-wrap">
+                                <div class="form-group">
+                                    <label for="rdoUseY">사용여부</label>
+                                    <div class="form-group mt-3">
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" class="custom-control-input" id="rdoUseY" name="rdoUse">
+                                            <label class="custom-control-label" for="rdoUseY">사용</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" class="custom-control-input" id="rdoUseN" name="rdoUse">
+                                            <label class="custom-control-label" for="rdoUseN">미사용</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <section>
+                <div class="container-fluid">
+                    <div class="row justify-content-between">
+                        <div class="col-auto">
+                            <button type="button" class="btn btn-reset btn-lg" onclick="history.back()">목록</button>
+                        </div>
+                        <div class="col-auto">
+                            <button type="button" class="btn btn-primary btn-lg min-width">저장</button>
+                            <button type="button" class="btn btn-cancel btn-lg min-width">취소</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- modal : 제조사 선택 -->
+    <div class="modal" tabindex="-1" role="dialog" id="modalManufacturer">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">제조사 선택</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-thead-bg text-center mb-0">
+                        <colgroup>
+                            <col style="width:60px">
+                            <col>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>약 그룹</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-checkbox without-label"> <!-- 레이블 없는 단독 체크박스일때 .without-label -->
+                                        <input type="checkbox" class="custom-control-input" id="chk1" name="chkManufacturer">
+                                        <label class="custom-control-label" for="chk1"></label>
+                                    </div>
+                                </td>
+                                <td>◇◇△△제약</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-checkbox without-label"> <!-- 레이블 없는 단독 체크박스일때 .without-label -->
+                                        <input type="checkbox" class="custom-control-input" id="chk2" name="chkManufacturer">
+                                        <label class="custom-control-label" for="chk2"></label>
+                                    </div>
+                                </td>
+                                <td><label for="chk2">△△제약</label></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-checkbox without-label"> <!-- 레이블 없는 단독 체크박스일때 .without-label -->
+                                        <input type="checkbox" class="custom-control-input" id="chk3" name="chkManufacturer">
+                                        <label class="custom-control-label" for="chk3"></label>
+                                    </div>
+                                </td>
+                                <td><label for="chk3">△△제약</label></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-checkbox without-label"> <!-- 레이블 없는 단독 체크박스일때 .without-label -->
+                                        <input type="checkbox" class="custom-control-input" id="chk4" name="chkManufacturer">
+                                        <label class="custom-control-label" for="chk4"></label>
+                                    </div>
+                                </td>
+                                <td><label for="chk4">◇◇제약</label></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-checkbox without-label"> <!-- 레이블 없는 단독 체크박스일때 .without-label -->
+                                        <input type="checkbox" class="custom-control-input" id="chk5" name="chkManufacturer">
+                                        <label class="custom-control-label" for="chk5"></label>
+                                    </div>
+                                </td>
+                                <td><label for="chk5">☆☆제약</label></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <div class="col-6">
+                        <button type="button" class="btn btn-primary btn-lg btn-block" id="btnManufacturerSelect">확인</button>
+                    </div>
+                    <div class="col-6">
+                        <button type="button" class="btn btn-cancel btn-lg btn-block" data-dismiss="modal">취소</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $('#btnManufacturerSelect').on('click',function(){
+
+            });
+        });
+    </script>
+
+</body>
+
+</html>

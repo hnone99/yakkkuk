@@ -1,0 +1,10 @@
+#footer{
+    width: 50%;position: absolute;left:0;bottom: 50px;color: #d5acff;font-size: 12px;text-align: center;
+    p{margin-bottom: 0;}
+}
+
+@include media-breakpoint-down(md) {
+    #footer{
+        width: 100vw;bottom: 30px;line-height: 1;
+    }
+}

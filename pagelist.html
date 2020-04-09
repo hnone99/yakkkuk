@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>약꾹</title>
+        <style type="text/css">
+            body{padding:20px;position:relative;}
+            *{margin:0;padding:0;font-size:12px;color:#222;line-height:1.5em;font-family:'NanumGothic';}
+            h1{margin-bottom:20px;font-size:24px;text-align: center;}
+            table{width:100%;border-collapse:collapse;margin: 0 auto;}
+            table th,
+            table td{border:1px solid #ccc;padding:4px 10px;word-break: keep-all}
+            table th{background:#894cc7;color:#fff;padding:10px;font-size:14px;}
+            table td a{color:#9966cc;text-decoration:none;}
+            table td a:hover{text-decoration:underline;}
+            table tbody tr:hover{background-color: #fdecec;}
+            .noteTable{display: table;width: 100%;}
+            .noteTable .date{display: table-cell;color: #e04545;width: 40px;}
+            .noteTable .note{display: table-cell;}
+            .center{text-align: center;}
+            .bg{background: #fff5f5;}
+            ul.float{position:absolute;right:20px;top:20px;}
+            ul.float li{list-style:none;border:1px solid #ccc;padding:2px 5px;display:inline-block;}
+            .end{background:#ffffcc;}
+            .ing{background:#f6b1a6;}
+            .list{text-align:center;padding:0 0 20px;}
+            .list a{text-decoration:none;margin:0 10px;}
+            .list a:hover{text-decoration:underline;}
+        </style>
+    </head>
+
+
+    <body>
+        <h1>약꾹 PAGELIST</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Depth 1</th>
+                    <th>Depth 2</th>
+                    <th>Depth 3</th>
+                    <th>Depth 4</th>
+                    <th>File</th>
+                    <th>pageLink</th>
+                    <th>최초작업일</th>
+                    <th>수정일</th>
+                    <th></th>
+                    <th>Popup</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td>0. 로그인</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>/0_login/</td>
+                    <td><a target="_blank" href="content/0_login/login.html">login.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note">이메일찾기 / 비밀번호찾기</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>1. 회원관리</td>
+                    <td>회원관리</td>
+                    <td>리스트</td>
+                    <td></td>
+                    <td>/1_member/</td>
+                    <td><a target="_blank" href="content/1_member/member_list.html">member_list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>상세</td>
+                    <td>가입회원</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/1_member/member_view_y.html">member_view_y.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note">복약스케줄등록 / 회원탈퇴처리</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>미가입회원</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/1_member/member_view_n.html">member_view_n.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note">복약스케줄등록 / 회원탈퇴처리 / 비밀번호초기화</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>복약스케줄 상세</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/1_member/member_detail.html">member_detail.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>탈퇴회원 관리</td>
+                    <td>리스트</td>
+                    <td>가입회원</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/1_member/non_member_list.html">non_member_list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>상세</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/1_member/non_member_view.html">non_member_view.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>복약스케줄 상세</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/1_member/non_member_detail.html">non_member_detail.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>2. 버튼관리</td>
+                    <td>리스트</td>
+                    <td></td>
+                    <td></td>
+                    <td>/2_button/</td>
+                    <td><a target="_blank" href="content/2_button/button_list.html">button_list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>상세</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/2_button/button_view.html">button_view.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>3. 기관/관리자 관리</td>
+                    <td>기관관리</td>
+                    <td>리스트</td>
+                    <td></td>
+                    <td>/3_organization/</td>
+                    <td><a target="_blank" href="content/3_organization/organization_list.html">organization_list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>상세</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/3_organization/organization_view.html">organization_view.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>등록/수정</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/3_organization/organization_form.html">organization_form.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>관리자관리</td>
+                    <td>리스트</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/3_organization/admin_list.html">admin_list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>상세</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/3_organization/admin_view.html">admin_view.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>등록/수정</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/3_organization/admin_form.html">admin_form.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>관리자권한 관리</td>
+                    <td>리스트</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/3_organization/authority_list.html">authority_list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>등록</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/3_organization/authority_form.html">authority_form.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>관리자 접속 LOG</td>
+                    <td>리스트</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/3_organization/log_list.html">log_list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>상세</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/3_organization/log_view.html">log_view.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note">IP접속이력 / 상세조회내용</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>4. 앱 관리</td>
+                    <td>서비스 관리</td>
+                    <td>리스트</td>
+                    <td></td>
+                    <td>/4_app/</td>
+                    <td><a target="_blank" href="content/4_app/service_list.html">service_list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>상세</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/4_app/service_view.html">service_view.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>약꾹</title>
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta name="keywords" content="약꾹">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/MDTimePicker/mdtimepicker.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <!-- jquery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jquery -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- bootstrap -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- timepicker -->
+    <script src="../../resources/plugins/MDTimePicker/mdtimepicker.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header-block">
+            <!-- header include -->
+        </div>
+
+        <div id="location-block">
+            <!-- nav include -->
+        </div>
+
+        <div id="content-block">
+            <section class="content">
+                <div class="container-fluid">
+                    <form action="">
+
+                        <div class="title-wrap">
+                            <div class="row">
+                                <div class="col-auto">
+                                    <h2 class="title">기본정보</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-wrap">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <label for="formOrgan" class="required">기관</label>
+                                        <input type="text" class="form-control" id="formOrgan">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <label for="formName" class="required">이름</label>
+                                        <input type="text" class="form-control" id="formName">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="formEmail" class="required">대표 이메일</label>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <input type="email" class="form-control" id="formEmail">
+                                            </div>
+                                            <div class="col-6">
+                                                <small class="form-text">※ 입력하신 이메일은 로그인 시 아이디로 사용됩니다.</small>
+                                            </div>
+                                        </div>                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="formPw" class="required">비밀번호</label>
+                                        <button type="button" class="btn btn-dark btn-block btn-square" id="formPw">비밀번호 초기화</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="title-wrap">
+                            <div class="row">
+                                <div class="col-auto">
+                                    <h2 class="title">연락처</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-wrap">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="formMobile" class="required">휴대전화</label>
+                                        <input type="tel" class="form-control" id="formMobile">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <label for="formCompanyTel">회사전화</label>
+                                        <input type="tel" class="form-control" id="formCompanyTel">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <label for="formFax">팩스</label>
+                                        <input type="tel" class="form-control" id="formFax">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="title-wrap">
+                            <div class="row">
+                                <div class="col-auto">
+                                    <h2 class="title">권한설정</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-wrap">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="formAuthority">권한설정</label>
+                                        <select name="" id="formAuthority" class="form-control">
+                                            <option value="">선택</option>
+                                        </select>                              
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="title-wrap">
+                            <div class="row">
+                                <div class="col-auto">
+                                    <h2 class="title">사용여부</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-wrap">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="rdoUseY">사용여부</label>
+                                        <div class="form-group mt-3">
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" class="custom-control-input" id="rdoUseY" name="rdoUse">
+                                                <label class="custom-control-label" for="rdoUseY">사용</label>
+                                            </div>
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" class="custom-control-input" id="rdoUseN" name="rdoUse">
+                                                <label class="custom-control-label" for="rdoUseN">미사용</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </section>
+            <section>
+                <div class="container-fluid">
+                    <div class="row justify-content-between">
+                        <div class="col-auto">
+
+                        </div>
+                        <div class="col-auto">
+                            <button type="button" class="btn btn-primary btn-lg min-width">저장</button>
+                            <button type="button" class="btn btn-cancel btn-lg min-width">취소</button>
+                            <button type="button" class="btn btn-gray-dark btn-lg min-width">삭제</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            
+        });
+    </script>
+
+</body>
+
+</html>
